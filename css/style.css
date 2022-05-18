@@ -52,7 +52,7 @@ section div.charHead {
 section div.charBody {
   width: 130px;
   height: 215px;
-  border-radius: 25px 25px 7px 7px;
+  border-radius: 30px 30px 8.5px 8.5px;
 }
 
 section [name="firstHalf"] {
