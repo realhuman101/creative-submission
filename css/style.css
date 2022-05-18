@@ -1,0 +1,118 @@
+* {
+  font-family: 'Nunito', sans-serif;
+}
+
+*:focus, *:focus-within {
+  outline: none;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+section {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+section div {
+  height: 100%;
+  width: 50%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: relative;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+}
+
+section div.char {
+  position: relative;
+  background-color: white;
+}
+
+section div.charHead {
+  width: 85px;
+  height: 85px;
+  border-radius: 100%;
+}
+
+section div.charBody {
+  width: 130px;
+  height: 215px;
+  border-radius: 25px 25px 7px 7px;
+}
+
+section [name="firstHalf"] {
+  background-color: #5ea1ff;
+}
+
+section [name="secondHalf"] {
+  background-color: #ff80ae;
+}
+
+section #equal {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 115px;
+  height: 100px;
+  display: block;
+  z-index: 1;
+  -webkit-transition: all .35s ease-in-out;
+  transition: all .35s ease-in-out;
+}
+
+section #equal span {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20%;
+  position: relative;
+  width: inherit;
+  height: inherit;
+  border-radius: 3px;
+}
+
+section #equal span::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 33%;
+  background-color: white;
+  border-radius: inherit;
+}
+
+section #equal span::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 33%;
+  background-color: white;
+  border-radius: inherit;
+}
+
+section #equal:hover, section #equal:focus {
+  width: 125px;
+  height: 110px;
+  cursor: pointer;
+}
+/*# sourceMappingURL=style.css.map */
