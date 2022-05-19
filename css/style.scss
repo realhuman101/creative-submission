@@ -99,12 +99,33 @@ section {
             height: 110px;
             cursor: pointer;
 
-            & + section {
-                & [name="firstHalf"], 
-                & [name="secondHalf"] {
+            // & + section {
+            //     & [name="firstHalf"], 
+            //     & [name="secondHalf"] {
                     
-                }
-            }
+            //     }
+            // }
         }
+    }
+}
+
+#wheel {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 5;
+
+    & div {
+        border-radius: 100%;
+        position: absolute;
+        width: 350px;
+        height: 350px;
+    }
+
+    &:nth-child(1) {
+        background-color: red;
     }
 }
