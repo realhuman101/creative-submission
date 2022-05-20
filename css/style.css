@@ -164,8 +164,8 @@ section #equal:hover ~ #wheel div:nth-child(5), section #equal:focus ~ #wheel di
 }
 
 #wheel div {
-  -webkit-transition: translateX 1s ease-in-out;
-  transition: translateX 1s ease-in-out;
+  -webkit-transition: all 10s;
+  transition: all 10s;
   -webkit-animation: spin 5s linear infinite;
           animation: spin 5s linear infinite;
   display: none;
@@ -181,12 +181,42 @@ section #equal:hover ~ #wheel div:nth-child(5), section #equal:focus ~ #wheel di
   z-index: 10;
 }
 
+#wheel div img {
+  -webkit-animation: stay 5s linear infinite;
+          animation: stay 5s linear infinite;
+}
+
 #wheel div:nth-child(1) {
   background-color: #f96a6a;
 }
 
 #wheel div:nth-child(2) {
   background-color: #6af96c;
+}
+
+#wheel div:nth-child(3) {
+  background-color: #6ae6f9;
+}
+
+#wheel div:nth-child(4) {
+  background-color: #e6f96a;
+}
+
+#wheel div:nth-child(5) {
+  background-color: #f9bb6a;
+}
+
+#wheel div:nth-child(1) {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
+#wheel div:nth-child(1) img {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
+#wheel div:nth-child(2) {
   -webkit-transform: rotate(72deg);
           transform: rotate(72deg);
 }
@@ -197,7 +227,6 @@ section #equal:hover ~ #wheel div:nth-child(5), section #equal:focus ~ #wheel di
 }
 
 #wheel div:nth-child(3) {
-  background-color: #6ae6f9;
   -webkit-transform: rotate(144deg);
           transform: rotate(144deg);
 }
@@ -208,7 +237,6 @@ section #equal:hover ~ #wheel div:nth-child(5), section #equal:focus ~ #wheel di
 }
 
 #wheel div:nth-child(4) {
-  background-color: #e6f96a;
   -webkit-transform: rotate(216deg);
           transform: rotate(216deg);
 }
@@ -219,7 +247,6 @@ section #equal:hover ~ #wheel div:nth-child(5), section #equal:focus ~ #wheel di
 }
 
 #wheel div:nth-child(5) {
-  background-color: #f9bb6a;
   -webkit-transform: rotate(288deg);
           transform: rotate(288deg);
 }
@@ -227,11 +254,6 @@ section #equal:hover ~ #wheel div:nth-child(5), section #equal:focus ~ #wheel di
 #wheel div:nth-child(5) img {
   -webkit-transform: rotate(-288deg);
           transform: rotate(-288deg);
-}
-
-#wheel div img {
-  -webkit-animation: stay 5s linear infinite;
-          animation: stay 5s linear infinite;
 }
 
 @-webkit-keyframes spin {
