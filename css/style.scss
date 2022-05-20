@@ -105,6 +105,12 @@ section {
 
             & ~ #wheel div {
                 display: flex;
+                
+                @for $i from 1 through 5 {
+                    &:nth-child(#{$i}) {
+                        transform: rotate((($i - 1)*72)+deg) translateX(15vw);
+                    }
+                }
             }
         }
     }
@@ -122,6 +128,7 @@ section {
     height: 100%;
 
     & div {
+        transition: translateX 1s ease-in-out;
         animation: spin 5s linear infinite;
         display: none;
         border-radius: 100%;
@@ -137,12 +144,11 @@ section {
 
         &:nth-child(1) {
             background-color: rgb(249, 106, 106);
-            transform: translateX(15vw);
         }
 
         &:nth-child(2) {
             background-color: rgb(106, 249, 108);
-            transform: rotate(72deg) translateX(15vw);
+            transform: rotate(72deg);
 
             & img {
                 transform: rotate(-72deg);
@@ -151,7 +157,7 @@ section {
 
         &:nth-child(3) {
             background-color: rgb(106, 230, 249);
-            transform: rotate(144deg) translateX(15vw);
+            transform: rotate(144deg);
 
             & img {
                 transform: rotate(-144deg);
@@ -160,7 +166,7 @@ section {
 
         &:nth-child(4) {
             background-color: rgb(230, 249, 106);
-            transform: rotate(216deg) translateX(15vw);
+            transform: rotate(216deg);
 
             & img {
                 transform: rotate(-216deg);
@@ -169,7 +175,7 @@ section {
 
         &:nth-child(5) {
             background-color: rgb(249, 187, 106);
-            transform: rotate(288deg) translateX(15vw);
+            transform: rotate(288deg);
 
             & img {
                 transform: rotate(-288deg);
