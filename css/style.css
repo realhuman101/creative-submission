@@ -121,7 +121,9 @@ section #equal:hover, section #equal:focus {
 }
 
 section #equal:hover ~ #wheel div, section #equal:focus ~ #wheel div {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 #wheel {
@@ -164,10 +166,20 @@ section #equal:hover ~ #wheel div, section #equal:focus ~ #wheel div {
           transform: rotate(72deg) translateX(15vw);
 }
 
+#wheel div:nth-child(2) img {
+  -webkit-transform: rotate(-72deg);
+          transform: rotate(-72deg);
+}
+
 #wheel div:nth-child(3) {
   background-color: #6ae6f9;
   -webkit-transform: rotate(144deg) translateX(15vw);
           transform: rotate(144deg) translateX(15vw);
+}
+
+#wheel div:nth-child(3) img {
+  -webkit-transform: rotate(-144deg);
+          transform: rotate(-144deg);
 }
 
 #wheel div:nth-child(4) {
@@ -176,10 +188,25 @@ section #equal:hover ~ #wheel div, section #equal:focus ~ #wheel div {
           transform: rotate(216deg) translateX(15vw);
 }
 
+#wheel div:nth-child(4) img {
+  -webkit-transform: rotate(-216deg);
+          transform: rotate(-216deg);
+}
+
 #wheel div:nth-child(5) {
   background-color: #f9bb6a;
   -webkit-transform: rotate(288deg) translateX(15vw);
           transform: rotate(288deg) translateX(15vw);
+}
+
+#wheel div:nth-child(5) img {
+  -webkit-transform: rotate(-288deg);
+          transform: rotate(-288deg);
+}
+
+#wheel div img {
+  -webkit-animation: stay 5s linear infinite;
+          animation: stay 5s linear infinite;
 }
 
 @-webkit-keyframes spin {

@@ -104,8 +104,7 @@ section {
             cursor: pointer;
 
             & ~ #wheel div {
-                // transform: translateX(15vw);
-                display: block;
+                display: flex;
             }
         }
     }
@@ -144,21 +143,41 @@ section {
         &:nth-child(2) {
             background-color: rgb(106, 249, 108);
             transform: rotate(72deg) translateX(15vw);
+
+            & img {
+                transform: rotate(-72deg);
+            }
         }
 
         &:nth-child(3) {
             background-color: rgb(106, 230, 249);
             transform: rotate(144deg) translateX(15vw);
+
+            & img {
+                transform: rotate(-144deg);
+            }
         }
 
         &:nth-child(4) {
             background-color: rgb(230, 249, 106);
             transform: rotate(216deg) translateX(15vw);
+
+            & img {
+                transform: rotate(-216deg);
+            }
         }
 
         &:nth-child(5) {
             background-color: rgb(249, 187, 106);
             transform: rotate(288deg) translateX(15vw);
+
+            & img {
+                transform: rotate(-288deg);
+            }
+        }
+
+        & img {
+            animation: stay 5s linear infinite;
         }
     }
 }
