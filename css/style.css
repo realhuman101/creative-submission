@@ -164,13 +164,13 @@ section #equal:hover ~ #wheel div:nth-child(5), section #equal:focus ~ #wheel di
 }
 
 #wheel div {
-  -webkit-transition: all 10s;
-  transition: all 10s;
-  -webkit-animation: spin 5s linear infinite;
-          animation: spin 5s linear infinite;
   display: none;
   border-radius: 100%;
   position: absolute;
+  -webkit-transition: -webkit-transform 1s ease-in-out;
+  transition: -webkit-transform 1s ease-in-out;
+  transition: transform 1s ease-in-out;
+  transition: transform 1s ease-in-out, -webkit-transform 1s ease-in-out;
   margin-left: auto;
   margin-right: auto;
   left: 0;
@@ -179,11 +179,6 @@ section #equal:hover ~ #wheel div:nth-child(5), section #equal:focus ~ #wheel di
   width: 150px;
   height: 150px;
   z-index: 10;
-}
-
-#wheel div img {
-  -webkit-animation: stay 5s linear infinite;
-          animation: stay 5s linear infinite;
 }
 
 #wheel div:nth-child(1) {
@@ -207,76 +202,327 @@ section #equal:hover ~ #wheel div:nth-child(5), section #equal:focus ~ #wheel di
 }
 
 #wheel div:nth-child(1) {
-  -webkit-transform: rotate(0deg);
-          transform: rotate(0deg);
+  -webkit-transform: rotate(0deg) translateX(0vw);
+          transform: rotate(0deg) translateX(0vw);
+  -webkit-animation: spin1 5s linear infinite;
+          animation: spin1 5s linear infinite;
 }
 
 #wheel div:nth-child(1) img {
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
+  -webkit-animation: stay1 5s linear infinite;
+          animation: stay1 5s linear infinite;
+}
+
+@-webkit-keyframes spin1 {
+  to {
+    -webkit-transform: rotate(360deg) translateX(15vw);
+            transform: rotate(360deg) translateX(15vw);
+  }
+}
+
+@keyframes spin1 {
+  to {
+    -webkit-transform: rotate(360deg) translateX(15vw);
+            transform: rotate(360deg) translateX(15vw);
+  }
+}
+
+@-webkit-keyframes stay1 {
+  to {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+}
+
+@keyframes stay1 {
+  to {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+}
+
+@supports (rotate: 1turn) {
+  @-webkit-keyframes spin1 {
+    to {
+      rotate: 1turn;
+    }
+  }
+  @keyframes spin1 {
+    to {
+      rotate: 1turn;
+    }
+  }
+  @-webkit-keyframes stay1 {
+    to {
+      rotate: -1turn;
+    }
+  }
+  @keyframes stay1 {
+    to {
+      rotate: -1turn;
+    }
+  }
 }
 
 #wheel div:nth-child(2) {
-  -webkit-transform: rotate(72deg);
-          transform: rotate(72deg);
+  -webkit-transform: rotate(72deg) translateX(0vw);
+          transform: rotate(72deg) translateX(0vw);
+  -webkit-animation: spin2 5s linear infinite;
+          animation: spin2 5s linear infinite;
 }
 
 #wheel div:nth-child(2) img {
   -webkit-transform: rotate(-72deg);
           transform: rotate(-72deg);
+  -webkit-animation: stay2 5s linear infinite;
+          animation: stay2 5s linear infinite;
+}
+
+@-webkit-keyframes spin2 {
+  to {
+    -webkit-transform: rotate(432deg) translateX(15vw);
+            transform: rotate(432deg) translateX(15vw);
+  }
+}
+
+@keyframes spin2 {
+  to {
+    -webkit-transform: rotate(432deg) translateX(15vw);
+            transform: rotate(432deg) translateX(15vw);
+  }
+}
+
+@-webkit-keyframes stay2 {
+  to {
+    -webkit-transform: rotate(-432deg);
+            transform: rotate(-432deg);
+  }
+}
+
+@keyframes stay2 {
+  to {
+    -webkit-transform: rotate(-432deg);
+            transform: rotate(-432deg);
+  }
+}
+
+@supports (rotate: 1turn) {
+  @-webkit-keyframes spin2 {
+    to {
+      rotate: 1turn;
+    }
+  }
+  @keyframes spin2 {
+    to {
+      rotate: 1turn;
+    }
+  }
+  @-webkit-keyframes stay2 {
+    to {
+      rotate: -1turn;
+    }
+  }
+  @keyframes stay2 {
+    to {
+      rotate: -1turn;
+    }
+  }
 }
 
 #wheel div:nth-child(3) {
-  -webkit-transform: rotate(144deg);
-          transform: rotate(144deg);
+  -webkit-transform: rotate(144deg) translateX(0vw);
+          transform: rotate(144deg) translateX(0vw);
+  -webkit-animation: spin3 5s linear infinite;
+          animation: spin3 5s linear infinite;
 }
 
 #wheel div:nth-child(3) img {
   -webkit-transform: rotate(-144deg);
           transform: rotate(-144deg);
+  -webkit-animation: stay3 5s linear infinite;
+          animation: stay3 5s linear infinite;
+}
+
+@-webkit-keyframes spin3 {
+  to {
+    -webkit-transform: rotate(504deg) translateX(15vw);
+            transform: rotate(504deg) translateX(15vw);
+  }
+}
+
+@keyframes spin3 {
+  to {
+    -webkit-transform: rotate(504deg) translateX(15vw);
+            transform: rotate(504deg) translateX(15vw);
+  }
+}
+
+@-webkit-keyframes stay3 {
+  to {
+    -webkit-transform: rotate(-504deg);
+            transform: rotate(-504deg);
+  }
+}
+
+@keyframes stay3 {
+  to {
+    -webkit-transform: rotate(-504deg);
+            transform: rotate(-504deg);
+  }
+}
+
+@supports (rotate: 1turn) {
+  @-webkit-keyframes spin3 {
+    to {
+      rotate: 1turn;
+    }
+  }
+  @keyframes spin3 {
+    to {
+      rotate: 1turn;
+    }
+  }
+  @-webkit-keyframes stay3 {
+    to {
+      rotate: -1turn;
+    }
+  }
+  @keyframes stay3 {
+    to {
+      rotate: -1turn;
+    }
+  }
 }
 
 #wheel div:nth-child(4) {
-  -webkit-transform: rotate(216deg);
-          transform: rotate(216deg);
+  -webkit-transform: rotate(216deg) translateX(0vw);
+          transform: rotate(216deg) translateX(0vw);
+  -webkit-animation: spin4 5s linear infinite;
+          animation: spin4 5s linear infinite;
 }
 
 #wheel div:nth-child(4) img {
   -webkit-transform: rotate(-216deg);
           transform: rotate(-216deg);
+  -webkit-animation: stay4 5s linear infinite;
+          animation: stay4 5s linear infinite;
+}
+
+@-webkit-keyframes spin4 {
+  to {
+    -webkit-transform: rotate(576deg) translateX(15vw);
+            transform: rotate(576deg) translateX(15vw);
+  }
+}
+
+@keyframes spin4 {
+  to {
+    -webkit-transform: rotate(576deg) translateX(15vw);
+            transform: rotate(576deg) translateX(15vw);
+  }
+}
+
+@-webkit-keyframes stay4 {
+  to {
+    -webkit-transform: rotate(-576deg);
+            transform: rotate(-576deg);
+  }
+}
+
+@keyframes stay4 {
+  to {
+    -webkit-transform: rotate(-576deg);
+            transform: rotate(-576deg);
+  }
+}
+
+@supports (rotate: 1turn) {
+  @-webkit-keyframes spin4 {
+    to {
+      rotate: 1turn;
+    }
+  }
+  @keyframes spin4 {
+    to {
+      rotate: 1turn;
+    }
+  }
+  @-webkit-keyframes stay4 {
+    to {
+      rotate: -1turn;
+    }
+  }
+  @keyframes stay4 {
+    to {
+      rotate: -1turn;
+    }
+  }
 }
 
 #wheel div:nth-child(5) {
-  -webkit-transform: rotate(288deg);
-          transform: rotate(288deg);
+  -webkit-transform: rotate(288deg) translateX(0vw);
+          transform: rotate(288deg) translateX(0vw);
+  -webkit-animation: spin5 5s linear infinite;
+          animation: spin5 5s linear infinite;
 }
 
 #wheel div:nth-child(5) img {
   -webkit-transform: rotate(-288deg);
           transform: rotate(-288deg);
+  -webkit-animation: stay5 5s linear infinite;
+          animation: stay5 5s linear infinite;
 }
 
-@-webkit-keyframes spin {
+@-webkit-keyframes spin5 {
   to {
-    rotate: 1turn;
+    -webkit-transform: rotate(648deg) translateX(15vw);
+            transform: rotate(648deg) translateX(15vw);
   }
 }
 
-@keyframes spin {
+@keyframes spin5 {
   to {
-    rotate: 1turn;
+    -webkit-transform: rotate(648deg) translateX(15vw);
+            transform: rotate(648deg) translateX(15vw);
   }
 }
 
-@-webkit-keyframes stay {
+@-webkit-keyframes stay5 {
   to {
-    rotate: -1turn;
+    -webkit-transform: rotate(-648deg);
+            transform: rotate(-648deg);
   }
 }
 
-@keyframes stay {
+@keyframes stay5 {
   to {
-    rotate: -1turn;
+    -webkit-transform: rotate(-648deg);
+            transform: rotate(-648deg);
+  }
+}
+
+@supports (rotate: 1turn) {
+  @-webkit-keyframes spin5 {
+    to {
+      rotate: 1turn;
+    }
+  }
+  @keyframes spin5 {
+    to {
+      rotate: 1turn;
+    }
+  }
+  @-webkit-keyframes stay5 {
+    to {
+      rotate: -1turn;
+    }
+  }
+  @keyframes stay5 {
+    to {
+      rotate: -1turn;
+    }
   }
 }
 /*# sourceMappingURL=style.css.map */
