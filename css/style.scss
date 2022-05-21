@@ -104,7 +104,8 @@ section {
             cursor: pointer;
 
             & ~ #wheel div {
-                display: flex;
+                visibility: visible;
+                opacity: 1;
                 
                 @for $i from 1 through 5 {
                     &:nth-child(#{$i}) {
@@ -163,10 +164,11 @@ section {
     height: 100%;
 
     & div {
-        display: none;
+        visibility: hidden;
         border-radius: 100%;
         position: absolute;
-        transition: transform 1s ease-in-out;
+        transition: transform 1s ease-in-out, visibility 1s ease-in-out, opacity 1s ease-in-out;
+        opacity: 0;
         margin-left: auto;
         margin-right: auto;
         left: 0;

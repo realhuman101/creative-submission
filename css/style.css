@@ -121,9 +121,8 @@ section #equal:hover, section #equal:focus {
 }
 
 section #equal:hover ~ #wheel div, section #equal:focus ~ #wheel div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  visibility: visible;
+  opacity: 1;
 }
 
 section #equal:hover ~ #wheel div:nth-child(1), section #equal:focus ~ #wheel div:nth-child(1) {
@@ -164,13 +163,14 @@ section #equal:hover ~ #wheel div:nth-child(5), section #equal:focus ~ #wheel di
 }
 
 #wheel div {
-  display: none;
+  visibility: hidden;
   border-radius: 100%;
   position: absolute;
-  -webkit-transition: -webkit-transform 1s ease-in-out;
-  transition: -webkit-transform 1s ease-in-out;
-  transition: transform 1s ease-in-out;
-  transition: transform 1s ease-in-out, -webkit-transform 1s ease-in-out;
+  -webkit-transition: visibility 1s ease-in-out, opacity 1s ease-in-out, -webkit-transform 1s ease-in-out;
+  transition: visibility 1s ease-in-out, opacity 1s ease-in-out, -webkit-transform 1s ease-in-out;
+  transition: transform 1s ease-in-out, visibility 1s ease-in-out, opacity 1s ease-in-out;
+  transition: transform 1s ease-in-out, visibility 1s ease-in-out, opacity 1s ease-in-out, -webkit-transform 1s ease-in-out;
+  opacity: 0;
   margin-left: auto;
   margin-right: auto;
   left: 0;
